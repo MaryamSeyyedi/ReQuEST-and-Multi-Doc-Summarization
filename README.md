@@ -14,7 +14,11 @@ This Multi-Document-Summarization project has 3 main phases:
 
 # ReQuEST: A compact multi-task model of Question Entailment, Query-focused Summarization, and Tag Generation
 
-   This model is composed of main 3 layers:
+   This model is composed of 3 main layers:
       1) BART based Shared Encoder
       2) Two Partially Shared Decoders
       3) three task-specific heads
+
+   - Question Entailment: contains an encoder and a multilayer neural network
+   - Query-Focused Summarization: contains the same encoder accompanied by a decoder component and a linear head
+   - Tag Generation: components are identical to Query-Focused Summarization except for the last decoder layers and the task-specific head
